@@ -1,21 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import GrowthChart from './GrowthChart'
+import growthData from './growth-data.json'
+import percentileData from './cdc-percentile-data.json'
+import WeightUnitSelector from './WeightUnitSelector'
 
 class App extends Component {
-  render() {
+  constructor () {
+    super()
+    this.state = {
+      percentileData,
+      growthData,
+      weightUnit: 'kg'
+    }
+  }
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='App'>
+        <WeightUnitSelector />
+        <GrowthChart
+          growthData={this.state.growthData}
+          percentileData={this.state.percentileData}
+          weightUnit={this.state.weightUnit}
+          width={800}
+          height={800}
+        />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
