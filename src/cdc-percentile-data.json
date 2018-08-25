@@ -1,6 +1,7 @@
 [
     {
         "description": "3rd",
+        "color": "red",
         "data": [
             {
                 "age": 0,
@@ -158,6 +159,7 @@
     },
     {
         "description": "5th",
+        "color": "red",
         "data": [
             {
                 "age": 0,
@@ -315,6 +317,7 @@
     },
     {
         "description": "10th",
+        "color": "orange",
         "data": [
             {
                 "age": 0,
@@ -946,6 +949,7 @@
     },
     {
         "description": "90th",
+        "color": "orange",
         "data": [
             {
                 "age": 0,
@@ -1103,6 +1107,7 @@
     },
     {
         "description": "95th",
+        "color": "red",
         "data": [
             {
                 "age": 0,
@@ -1260,6 +1265,7 @@
     },
     {
         "description": "97th",
+        "color": "red",
         "data": [
             {
                 "age": 0,
