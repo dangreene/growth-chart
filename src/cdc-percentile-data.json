@@ -472,6 +472,7 @@
     },
     {
         "description": "25th",
+        "color": "lightgreen",
         "data": [
             {
                 "age": 0,
@@ -629,6 +630,7 @@
     },
     {
         "description": "50th",
+        "color": "green",
         "data": [
             {
                 "age": 0,
@@ -786,6 +788,7 @@
     },
     {
         "description": "75th",
+        "color": "lightgreen",
         "data": [
             {
                 "age": 0,

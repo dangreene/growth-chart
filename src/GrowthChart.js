@@ -36,7 +36,7 @@ export default props => {
             name={set.description}
             data={set.data}
             line
-            fill='black'
+            fill={set.color || 'black'}
           />
         ))}
         <Scatter
