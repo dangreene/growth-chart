@@ -20,10 +20,13 @@ class App extends Component {
   }
   handleDataChange (data) {
     const dataSet = data === 'who' ? whoPercentileData : cdcPercentileData
+    const percentileData = this.state.weightUnit === 'kg'
+      ? dataSet
+      : dataSet.map(record =>
+          convertWeightRecord(this.state.weightUnit, record)
+        )
     this.setState({
-      percentileData: dataSet.map(record =>
-        convertWeightRecord(this.state.weightUnit, record)
-      )
+      percentileData
     })
   }
   handleUnitChange (unit) {
