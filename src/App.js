@@ -63,7 +63,7 @@ class App extends Component {
             {this.state.growthData.data.map((record, index) => (
               <tr key={index}>
                 <td>{record.age}</td>
-                <td>{record.weight}</td>
+                <td>{record.weight.toFixed(2)}</td>
               </tr>
             ))}
           </tbody>
