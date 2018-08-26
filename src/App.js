@@ -41,8 +41,7 @@ class App extends Component {
   render () {
     return (
       <div className='App'>
-        <PercentileDataSelector onDataChange={this.handleDataChange} />
-        <WeightUnitSelector onUnitChange={this.handleUnitChange} />
+        <h2>Growth Chart</h2>
         <GrowthChart
           growthData={this.state.growthData}
           percentileData={this.state.percentileData}
@@ -50,6 +49,25 @@ class App extends Component {
           width={800}
           height={800}
         />
+        <h2>Settings</h2>
+        <PercentileDataSelector onDataChange={this.handleDataChange} />
+        <WeightUnitSelector onUnitChange={this.handleUnitChange} />
+        <h2>Growth Data</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Age</th><th>Weight ({this.state.weightUnit})</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.growthData.data.map((record, index) => (
+              <tr key={index}>
+                <td>{record.age}</td>
+                <td>{record.weight}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     )
   }
